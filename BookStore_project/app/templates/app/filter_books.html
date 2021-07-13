@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+
+{% block title %} BookStore App | Filter Books {% endblock %}
+
+{% block content %}
+    <div class="navbar home-background">
+        <div class="left-nav">	
+            <h1 class="navbar-logo"><a href="{% url 'home' %}">Django BookStore App</a></h1>
+        </div>
+
+        <div class="right-nav">
+			<a class="btn btn-navbar" href="{% url 'display_books' %}">Display Books</a>	
+			<a class="btn btn-navbar" href="{% url 'add_book' %}">Add Book</a>
+		</div>
+    </div>
+
+    <div class="form-container filter-container home-background">
+		<form action="" method="POST">
+			{% csrf_token %}
+            <label for="id_genre">Choose Genre</label>
+            <p>*Hold down "Ctrl" to select more than one option</p>     
+            {{form.genre}}
+            <label for="id_language">Choose Language</label>     
+            <p>*Hold down "Ctrl" to select more than one option</p>     
+            {{form.language}}
+         <input class="btn btn-form" type="submit" name="filter_books" value="Filter Books">
+		</form>
+	</div>
+{% endblock %}
+

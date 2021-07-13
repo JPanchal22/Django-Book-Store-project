@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* HOME PAGE STYLING */
+
+.home-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.home-background{
+	background: rgba(0, 0, 0, 0.8) url("/static/img/library-image.jpg");
+	background-size: cover;
+	background-blend-mode: darken;
+}
+
+.home-background a{
+    text-decoration: none;
+    color: white;
+}
+
+.home-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 40px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.home-description{
+    height: 20vh;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.btn{
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin: 20px 20px 0 0; 
+    border: none;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btn:hover{
+	cursor: pointer;
+	background-color: darkgrey;
+}
+
+
+/* DISPLAY BOOKS PAGE STYLING */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    color: white;
+}
+
+.left-nav{
+    width: 70%;
+}
+
+.navbar-logo{
+    margin: 10px 40px 15px 40px;
+    font-size: 25px;
+}
+
+.right-nav{
+    width: 30%;
+    text-align: right;
+}
+
+.btn-navbar{
+    margin: 10px 15px;
+    font-size: 15px;
+}
+
+.btn-filter{
+    background-color: darkgreen;
+}
+
+.display-container{
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-book{
+    height: 88.5vh;
+}
+
+.book-container{
+    background-color: #f2ebec;
+    display: flex;
+    flex-direction: column;
+    margin: 18px auto;
+    padding: 15px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.book-name{
+    font-size: 20px;
+    margin: 0 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+}
+
+.book-details-container{
+    display: flex;
+    padding: 20px 0;
+}
+
+.book-details-container h4{
+    font-size: 17px;
+}
+
+.book-details-container p{
+    margin: 0 10px;
+    font-size: 17px;
+}
+
+.book-details-author, .book-details-genre, .book-details-language{
+    display: flex;
+}
+
+.display-container-empty{
+    height: 88.5vh;
+    justify-content: center;
+}
+
+
+/* ADD BOOK PAGE STYLING */
+.form-container{
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+form{
+    border: 2px solid white;
+    background-color: #f2ebec;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+form input{
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 3px solid #494250;
+}
+
+form input:focus{
+	outline: none;
+}
+
+form select{
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 3px solid #494250;
+}
+
+form select:focus{
+	outline: none;
+}
+
+.btn-form{
+    background-color: #494250;
+    border: 2px solid black;
+}
+
+.btn-form:hover{
+    background-color: black;
+}
+
+
+/* FILTER BOOKS PAGE STYLING */
+.filter-container{
+    height: 100vh;
+}
+
+.filter-container form{
+    width: 400px;
+}
+
+.filter-container form p{
+    font-size: 12px;
+    color: red;
+}
+
+/* RESPONSIVE DESIGN STYLING */
+@media only screen and (max-width: 1050px){
+    
+    /* HOME PAGE STYLING */
+    .home-description{
+        width: 50%;
+        text-align: center;
+        font-size: 19px;
+        margin: 0px auto 50px auto;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 995px){
+    
+    /* DISPLAY BOOKS PAGE STYLING */    
+    .navbar{
+		width: 100%;
+	}
+
+    .resp-navbar-height{
+		height: 80px;
+	}
+
+    .btn-navbar{
+        font-size: 12px;
+        margin: 10px 5px;
+    }
+
+    .book-details-container{
+        flex-direction: column;
+    }
+
+    .book-details-author, .book-details-genre, .book-details-language{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* ADD BOOK PAGE STYLING */
+    .form-container{
+        height: 100vh;
+        padding: 20px 0px;
+        font-size: 10px;
+    }
+
+    form{
+        padding: 20px 10px;
+        border-radius: 15px;
+    }
+    
+    form input{
+        margin: 15px 0;
+        width: 100%;
+        padding: 10px 10px;
+        border-radius: 8px;
+        font-size: 10px;
+        border: 3px solid #494250;
+    }
+
+    form select{
+        margin: 15px 0;
+        width: 100%;
+        padding: 10px 5px;
+        border-radius: 8px;
+        font-size: 10px;
+        border: 3px solid #494250;
+    }
+
+    .btn-form{
+        font-size: 12px;
+    }
+
+    /* FILTER BOOKS PAGE STYLING */
+    .filter-container form{
+        width: 300px;
+    }
+    
+    .filter-container form p{
+        font-size: 10px;
+        color: red;
+    }
+}
+
+@media only screen and (max-width: 740px){
+    
+    /* DISPLAY BOOKS PAGE STYLING */   
+    .resp-navbar-height{
+		height: 100px;
+	}
+
+}
+
+@media only screen and (max-width: 650px){
+    
+    /* DISPLAY BOOKS PAGE STYLING */    
+    .left-nav{
+        width: 40%;
+    }
+    
+    .right-nav{
+        width: 55%;
+    }
+
+    .btn-navbar{
+        font-size: 8px;
+    }
+
+    .resp-navbar-height{
+		height: 90px;
+	}
+
+    .navbar-logo{
+        margin: 10px 40px 15px 40px;
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (max-width: 650px){
+    
+    /* HOME PAGE STYLING */
+    .home-header{
+        font-size: 25px;
+        margin: 25px auto 0 auto;
+        text-align: center;
+    }
+
+    .home-description{
+        width: 50%;
+        text-align: center;
+        font-size: 19px;
+        margin: 10px auto 50px auto;
+    }
+    
+    .btn-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-home{
+        /* margin-top: 50px; */
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    /* DISPLAY BOOKS PAGE STYLING */    
+    .btn-navbar{
+        font-size: 6px;
+    }
+
+    .navbar-logo{
+        font-size: 14px;
+    }
+
+    .filter-container form{
+        width: 250px;
+    }
+
+    
+    
+}

@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %} BookStore App | Home {% endblock %}
+
+{% block content %}   
+    <div class="home-container home-background">
+        <h1 class="home-header">Django BookStore App</h1>
+        <p class="home-description">Welcome to the Django BookStore App. Here you can store all the information about your books and display them.</p>
+
+        <div class="btn-container">
+            <a class="btn btn-home" href="{% url 'display_books' %}">Display Books</a>
+		    <a class="btn btn-home" href="{% url 'add_book' %}">Add Book</a>
+        </div>
+    </div>
+{% endblock %}
+

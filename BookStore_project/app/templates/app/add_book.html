@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block title %} BookStore App | Add Book {% endblock %}
+
+{% block content %}  
+	<div class="navbar home-background">
+		<div class="left-nav">	
+			<h1 class="navbar-logo"><a href="{% url 'home' %}">Django BookStore App</a></h1>
+		</div>
+		
+		<div class="right-nav">
+			<a class="btn btn-navbar" href="{% url 'display_books' %}">Display Books</a>
+		</div>
+	</div>
+
+	<div class="form-container home-background">
+		<form action="" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input class="btn btn-form" type="submit" name="add_book" value="Add Book">
+		</form>
+	</div>
+{% endblock %}
